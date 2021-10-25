@@ -1,0 +1,17 @@
+{
+  "name": "gutendex",
+  "version": "1.0.0",
+  "description": "Gutenberg ebook metadata",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "api"
+  ],
+  "author": "Mohamed Kerkeb",
+  "license": "ISC"
+}

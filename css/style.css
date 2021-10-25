@@ -1,0 +1,85 @@
+body {
+    background: #f6f4f1;
+}
+
+/* Header */
+header {
+    background-color: #83FFCB;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+.books {
+    /* border: 1px solid darkcyan; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_wrapper {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    width: 33%;
+    height: 100%;
+    min-height: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title, .author {
+    width: 100%;
+    /* border: 1px dashed rebeccapurple; */
+    margin: 0;
+}
+
+.author {
+    text-align: right;
+}
+
+/* Page */
+
+.pageWrapper {
+    border: 1px solid red;
+}
+
+.page_title {
+    border: 1px solid black;
+}
+
+.content {
+    border: 1px dashed darkblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.download {
+    /* width: 80%; */
+}
+
+.dl-list {
+    border: 1px royalblue dashed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* width: 100%; */
+}
+
+
+.icon {
+    width: 50px;
+}
