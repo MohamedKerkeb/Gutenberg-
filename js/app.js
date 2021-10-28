@@ -6,16 +6,20 @@
 
 const BOOK = document.getElementById('books');
 const PAGE = document.getElementById('page');
+const BUTTON_SEARCH = document.getElementById('submit')
+const INPUT = document.getElementById('inputSearch')
 const URL_API = 'https://gutendex.com/books/';
+const URL_SEARCH = 'https://gutendex.com/books?search='
 
-const getData = async () => {
-	const response = await fetch(URL_API);
+const getData = async (url) => {
+	const response = await fetch(url);
 	const resFormat = await response.json();
 	//console.log(resFormat.results)
 	afficher(resFormat.results);
 };
 
 const afficher = (data) => {
+	BOOK.innerHTML = ''
 	for (const d of data) {
 		BOOK.innerHTML += `
             <div class="title_wrapper">
@@ -26,10 +30,9 @@ const afficher = (data) => {
 	}
 };
 
-getData();
+BUTTON_SEARCH.addEventListener('click', evt => {
+	getData(URL_SEARCH + INPUT.value)
+	INPUT.value = ''
+})
 
-const afficherPage = () => {
-	PAGE.innerHTML = `
-
-    `;
-};
+getData(URL_API);

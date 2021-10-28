@@ -26,12 +26,12 @@ const afficher = (data) => {
 	for (const d of data) {
 		PAGE_TITLE.innerText = d.title;
 		let image = '';
-		let epubImg = '';
-		let rdf = '';
-		let mobi = '';
-		let zip = '';
-		let html = '';
-		let plain = '';
+		let epubImg, rdf, mobi, zip, html, plain = '';
+		// let rdf = '';
+		// let mobi = '';
+		// let zip = '';
+		// let html = '';
+		// let plain = '';
 
 		for (const key in d.formats) {
 			//console.log(key)
@@ -72,10 +72,13 @@ const afficher = (data) => {
 		PAGE.innerHTML = `
         
         <div class="pageWrapper">
-        <h3 class="page_title">${d.title} by ${d.authors.map((el) => el.name)}</h3>
+        
         <div class="content">
-            <div class="img">
-                <img src=${image} alt=${d.title}>
+            <div class="imgTitle">
+				<div class="wrapperImg">
+                	<img src=${image} alt=${d.title}>
+				</div>
+				<h2 class="page_title">${d.title} by ${d.authors.map((el) => el.name)}</h2>
             </div>
             <div class="download">
                 <h4>DownLoad</h4>
